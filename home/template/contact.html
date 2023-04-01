@@ -1,0 +1,7 @@
+{% extend base/home.html %}
+
+  <form action="" method="post" class="contact__form">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+    <input type="submit" name="send" value="send" id="">
+  </form>
