@@ -3,7 +3,7 @@
   "disks": [
     {
       "name":"databse",
-      "mountTo": "BASE_DIR"
+      "mountTo": "media"
     }
   ]
 }
