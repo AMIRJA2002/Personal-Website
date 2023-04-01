@@ -77,3 +77,10 @@ class Contact(models.Model):
 
     def __str__(self):
         return f'{self.name}, {self.email}'
+
+
+class WhoAmIPicture(models.Model):
+    image = models.ImageField(upload_to='media/img')
+
+    def __str__(self):
+        return self.image.name

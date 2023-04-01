@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import AboutMe, Ability, WhatIOffer, App, Contact, PDFUpload
+from .models import AboutMe, Ability, WhatIOffer, App, Contact, PDFUpload, WhoAmIPicture
 from .forms import ContactForm
 
 class AboutMeView(View):
@@ -11,6 +11,7 @@ class AboutMeView(View):
         my_offers = WhatIOffer.objects.all()
         my_works = App.objects.all()
         pdf = PDFUpload.objects.last()
+        whoami = WhoAmIPicture.objects.last()
         return render(
             request,
             'base/home.html',
@@ -20,8 +21,9 @@ class AboutMeView(View):
                      'my_works': my_works,
                      'form': form,
                      'pdf': pdf,
+                     'whoami': whoami
                      }
-        )
+            )
 
     def post(self, reqeust):
         form_data = ContactForm(data=reqeust.POST)

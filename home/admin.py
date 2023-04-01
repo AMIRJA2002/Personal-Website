@@ -6,7 +6,8 @@ from .models import (
                      WhatIOffer,
                      MyOfferHints,
                      App,
-                     Contact
+                     Contact,
+                     WhoAmIPicture
                      )
 
 
@@ -43,3 +44,8 @@ class AppAdmin(admin.ModelAdmin):
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('name', 'email')
+
+
+@admin.register(WhoAmIPicture)
+class WhoAmIAdmin(admin.ModelAdmin):
+    ...
