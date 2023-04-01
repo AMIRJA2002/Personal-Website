@@ -1,8 +1,8 @@
 {
-  "app": "django-app",
+  "app": "amirja",
   "disks": [
     {
-      "name":"database",
+      "name":"databse",
       "mountTo": "BASE_DIR"
     }
   ]
